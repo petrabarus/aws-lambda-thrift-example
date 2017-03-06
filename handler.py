@@ -12,6 +12,7 @@ class MultiplicationServiceHandler(object):
 
 handler = MultiplicationServiceHandler()
 processor = MultiplicationService.Processor(handler)
+# I tried using TBinaryProtocol but somewhat it won't work, TJSONProtocol works
 protocol_factory = TJSONProtocol.TJSONProtocolFactory()
 server = TServer.TServer(processor, None, None, None, protocol_factory, protocol_factory)
 
