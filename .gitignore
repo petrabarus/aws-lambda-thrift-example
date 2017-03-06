@@ -1,0 +1,6 @@
+.serverless
+venv
+vendored
+*.pyc
+node_modules
+gen-py

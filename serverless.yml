@@ -1,0 +1,20 @@
+service: lambda-thrift-example
+
+provider:
+    name: aws
+    runtime: python2.7
+    region: ap-southeast-1
+
+package:
+    exclude:
+        - node_modules/**
+        - venv/**
+        - .travis.yml
+
+functions:
+    hello:
+        handler: handler.multiply
+        events:
+            - http:
+                path: multiply/multiply
+                method: post
